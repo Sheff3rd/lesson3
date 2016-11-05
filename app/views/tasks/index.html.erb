@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chore</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks = @tasks.paginate(:page => params[:page], :per_page => 3) %>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.Chore %></td>
+        <td><%= task.priority %></td>
+        <td><%= case task.status
+                when 0 then "Open"
+                when 1 then "Closed"
+                when 2 then "Resolved"
+                end  %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
+<p>
+<%= link_to 'Open chores', open_path %>
+<%= link_to 'Closed chores', closed_path %>
+<%= link_to 'Resolved chores', resolved_path %>
