@@ -8,4 +8,5 @@ class Task < ApplicationRecord
 
   validates :Chore, :priority, :status, presence: true
   validates :Chore, length: { minimum: 3 }
+  validates :Chore, length: { maximum: 24}
 end

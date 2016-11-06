@@ -8,15 +8,15 @@ class TasksController < ApplicationController
   end
 
   def open
-    @tasks = Task.all
+    @tasks = Task.all.order(:priority)
   end
 
   def closed
-    @tasks = Task.all
+    @tasks = Task.all.order(:priority)
   end
 
   def resolved
-    @tasks = Task.all
+    @tasks = Task.all.order(:priority)
   end
 
   # GET /tasks/1

@@ -2,18 +2,21 @@
 
 <h1>Tasks</h1>
 
-<table>
+
+<div class='container-fluid'>
+<table class="table   table-condensed table-striped ", style="width:40%">
   <thead>
     <tr>
-      <th>Chore</th>
-      <th>Priority</th>
-      <th>Status</th>
-      <th colspan="3"></th>
+      <th >Chore</th>
+      <th class="col-md-1">Priority</th>
+      <th class="col-md-1">Status</th>
+      <th colspan="3", class="col-md-1"></th>
     </tr>
   </thead>
 
   <tbody>
-    <%= will_paginate @tasks %>
+
+    <%= will_paginate @tasks, renderer: BootstrapPagination::Rails  %>
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.Chore %></td>
@@ -23,9 +26,9 @@
                 when 1 then "Closed"
                 when 2 then "Resolved"
                 end  %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', task, class: 'btn btn-sm btn-default' %></td>
+        <td><%= link_to 'Edit', edit_task_path(task), class: 'btn btn-sm btn-default' %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-default ' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,8 +36,11 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
-<p>
-<%= link_to 'Open chores', open_path %>
-<%= link_to 'Closed chores', closed_path %>
-<%= link_to 'Resolved chores', resolved_path %>
+<%= link_to 'New Task', new_task_path, class: 'btn btn-success' %>
+
+<br> <br>
+
+<%= link_to 'Open chores', open_path, class: 'btn btn-default' %>
+<%= link_to 'Closed chores', closed_path, class: 'btn btn-default' %>
+<%= link_to 'Resolved chores', resolved_path, class: 'btn btn-default'  %>
+</div>

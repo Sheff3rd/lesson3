@@ -8,18 +8,24 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
+# gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'will_paginate', '~> 3.1', '>= 3.1.5'
-gem 'bootstrap', '~> 4.0.0.alpha5'
-gem 'will_paginate-bootstrap'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+# gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'will_paginate-bootstrap'
+# gem 'sprockets', '~> 3.5', '>= 3.5.2'
+# gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
+gem 'bootstrap-sass', '>= 3.2.0'
 gem 'autoprefixer-rails'
+
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
