@@ -4,8 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all.order(:priority)
-    # Task.paginate(:page => params[:page], :per_page => 3)
+    @tasks = Task.all.order(:priority).paginate(page: params[:page], per_page: 3)
   end
 
   def open

@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @tasks = @tasks.paginate(page: params[:page], per_page: 3) %>
+    <%= will_paginate @tasks %>
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.Chore %></td>
