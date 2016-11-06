@@ -15,6 +15,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'will_paginate-bootstrap'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
