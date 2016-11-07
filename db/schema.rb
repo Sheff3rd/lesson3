@@ -12,15 +12,8 @@
 
 ActiveRecord::Schema.define(version: 20161101150238) do
 
-  create_table "high_scores", force: :cascade do |t|
-    t.string   "game"
-    t.integer  "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tasks", force: :cascade do |t|
-    t.string   "Chore"
+    t.string   "chore"
     t.integer  "priority"
     t.integer  "status"
     t.datetime "created_at", null: false

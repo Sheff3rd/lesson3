@@ -26,6 +26,7 @@ gem 'will_paginate-bootstrap'
 gem 'bootstrap-sass', '>= 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'haml', '~> 4.0', '>= 4.0.7'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
